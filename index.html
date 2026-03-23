@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SafeStay - Hidden Camera Awareness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔒 SafeStay</h1>
+    <p>Your guide to detecting hidden cameras</p>
+
+```
+<!-- Home -->
+<div id="home">
+  <button onclick="showSection('risk')">Start Detection Guide</button>
+</div>
+
+<!-- Risk Area -->
+<div id="risk" class="hidden">
+  <h2>Select Area</h2>
+  <select id="area">
+    <option value="hotel">Hotel Room</option>
+    <option value="bathroom">Bathroom</option>
+    <option value="changing">Changing Room</option>
+  </select>
+  <button onclick="showTips()">Show Risk Spots</button>
+  <p id="tips"></p>
+  <button onclick="showSection('guide')">Next</button>
+</div>
+
+<!-- Guide -->
+<div id="guide" class="hidden">
+  <h2>Detection Guide</h2>
+  <ul>
+    <li>Turn off lights and use phone flashlight to detect lens reflection</li>
+    <li>Check mirrors (look for one-way mirrors)</li>
+    <li>Scan WiFi for unknown devices</li>
+    <li>Inspect vents, smoke detectors,ac and chargers</li>
+  </ul>
+  <button onclick="showSection('checklist')">Next</button>
+</div>
+
+<!-- Checklist -->
+<div id="checklist" class="hidden">
+  <h2>Checklist</h2>
+  <label><input type="checkbox"> Checked mirrors</label><br>
+  <label><input type="checkbox"> Checked vents</label><br>
+  <label><input type="checkbox"> Scanned WiFi</label><br>
+  <label><input type="checkbox"> Checked suspicious objects</label><br>
+  <button onclick="showSection('emergency')">Next</button>
+</div>
+
+<!-- Emergency -->
+<div id="emergency" class="hidden">
+  <h2>🚨 Emergency</h2>
+  <p>If you find a hidden camera:</p>
+  <ul>
+    <li>Do NOT touch it</li>
+    <li>Take photos as evidence</li>
+    <li>Report to hotel management or authorities</li>
+  </ul>
+  <button onclick="showSection('home')">Restart</button>
+</div>
+```
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
